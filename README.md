@@ -7,10 +7,10 @@
 #### execute o mongo (MongoDB)
 
 ##1) Crie um banco de dados chamado biblioteca
-	>>use biblioteca
+>>use biblioteca
 
 ##2) Crie uma coleção (collection) chamada livros
-	>>db.createCollection('livros')
+>>db.createCollection('livros')
 
 ##3) Crie os seguintes documentos:
 
