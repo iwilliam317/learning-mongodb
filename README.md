@@ -19,30 +19,30 @@
 #####  valor: 25.00
 ##### autor: João
 
-------
+
 
   ##### título: NodeJS do básico ao avançado
   ##### valor: 280.00
   ##### autor: Jorge
 
-------
+
 
   ##### título: Android - criando apps reais
   ##### valor: 290.00
   ##### autor: Jamilton
 
 
-------
+
  ##### título: PHP e MySQL
  ##### valor: 190.00
  ##### autor: Fernando
 
-------
+
 
  ##### título: Lógica de Programação
  ##### valor: 20.00
  ##### autor: Maria
-------
+
 > db.livros.save(
 >	{
 >		titulo: 'Introdução a linguagem de marcação HTML',
@@ -113,7 +113,7 @@
 
 
 
-##5) Atualize os seguintes documentos:
+## 5) Atualize os seguintes documentos:
 
  Atualize o documento cujo o título é PHP e MySQL, passando seu valor de 190.00 para 175.00
 > db.livros.update(
@@ -160,7 +160,7 @@
 > )
 
 
-##6) Remove os seguintes documentos:
+## 6) Remove os seguintes documentos:
 
  Remova o documento cujo autor é João
 > db.livros.remove(
