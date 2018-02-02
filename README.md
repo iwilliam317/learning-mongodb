@@ -116,6 +116,7 @@
 ## 5) Atualize os seguintes documentos:
 
  Atualize o documento cujo o título é PHP e MySQL, passando seu valor de 190.00 para 175.00
+
 > db.livros.update(
 >	{ 
 >		titulo:{ $eq: "PHP e MYSQL" }
@@ -131,7 +132,10 @@
 >	}
 >
 > )
+
  Atualize o documento cujo autor é Jorge, passando seu título para Curso Completo de NodeJS
+
+
 > db.livros.update(
 > {
 >	autor: {$eq : 'Jorge'}
@@ -163,12 +167,14 @@
 ## 6) Remove os seguintes documentos:
 
  Remova o documento cujo autor é João
+
 > db.livros.remove(
 >	{ autor: 'João'},
 >	true
 > )
 
  Remova todos os documentos cujo valor é superior a 280.00
+ 
 > db.livros.remove(
 >	{valor: {$gt: 280}}, true
 > )
