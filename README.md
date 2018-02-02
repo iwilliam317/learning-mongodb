@@ -84,7 +84,7 @@
 >)
 
 
-##4) Crie as seguintes consultas:
+## 4) Crie as seguintes consultas:
 
  Crie uma consulta que retorne apenas os documentos de livros com valores superiores a 200.00
 > db.livros.find(
