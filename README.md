@@ -8,40 +8,40 @@
   execute o mongo (MongoDB)
 
 ## 1) Crie um banco de dados chamado biblioteca
->>use biblioteca
+> use biblioteca
 
 ## 2) Crie uma coleção (collection) chamada livros
->>db.createCollection('livros')
+> db.createCollection('livros')
 
 ## 3) Crie os seguintes documentos:
 
-######  título: Introdução a linguagem de marcação HTML
-######  valor: 25.00
-###### Autor: João
+#####  título: Introdução a linguagem de marcação HTML
+#####  valor: 25.00
+##### autor: João
 
 
 
-  título: NodeJS do básico ao avançado
-  valor: 280.00
-  Autor: Jorge
+  ##### título: NodeJS do básico ao avançado
+  ##### valor: 280.00
+  ##### autor: Jorge
 
 
 
-  título: Android - criando apps reais
-  valor: 290.00
-  Autor: Jamilton
+  ##### título: Android - criando apps reais
+  ##### valor: 290.00
+  ##### autor: Jamilton
 
 
 
- título: PHP e MySQL
- valor: 190.00
- Autor: Fernando
+ ##### título: PHP e MySQL
+ ##### valor: 190.00
+ ##### autor: Fernando
 
 
 
- título: Lógica de Programação
- valor: 20.00
- Autor: Maria
+ ##### título: Lógica de Programação
+ ##### valor: 20.00
+ ##### autor: Maria
 
 > db.livros.save(
 >	{
