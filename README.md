@@ -130,7 +130,6 @@
 >	{
 >		multi: true
 >	}
->
 > )
 
  Atualize o documento cujo autor é Jorge, passando seu título para Curso Completo de NodeJS
@@ -174,7 +173,7 @@
 > )
 
  Remova todos os documentos cujo valor é superior a 280.00
- 
+
 > db.livros.remove(
 >	{valor: {$gt: 280}}, true
 > )
