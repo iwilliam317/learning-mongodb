@@ -15,29 +15,29 @@
 
 ## 3) Crie os seguintes documentos:
 
-  título: Introdução a linguagem de marcação HTML
-  valor: 25.00
-  Autor: João
+######  título: Introdução a linguagem de marcação HTML
+######  valor: 25.00
+###### Autor: João
 
---
+
 
   título: NodeJS do básico ao avançado
   valor: 280.00
   Autor: Jorge
 
---
+
 
   título: Android - criando apps reais
   valor: 290.00
   Autor: Jamilton
 
---
+
 
  título: PHP e MySQL
  valor: 190.00
  Autor: Fernando
 
---
+
 
  título: Lógica de Programação
  valor: 20.00
