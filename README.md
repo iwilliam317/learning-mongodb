@@ -2,47 +2,47 @@
 
 
 ## Instalação do MongoDB
-#### Instale o MongoDB
-#### execute no terminal mongod (servidor)
-#### execute o mongo (MongoDB)
+####  Instale o MongoDB
+####  execute no terminal mongod (servidor)
+####  execute o mongo (MongoDB)
 
-##1) Crie um banco de dados chamado biblioteca
+## 1) Crie um banco de dados chamado biblioteca
 >>use biblioteca
 
-##2) Crie uma coleção (collection) chamada livros
+## 2) Crie uma coleção (collection) chamada livros
 >>db.createCollection('livros')
 
-##3) Crie os seguintes documentos:
+## 3) Crie os seguintes documentos:
 
-####título: Introdução a linguagem de marcação HTML
-####valor: 25.00
-####Autor: João
-
---
-
-####título: NodeJS do básico ao avançado
-####valor: 280.00
-####Autor: Jorge
+####  título: Introdução a linguagem de marcação HTML
+####  valor: 25.00
+####  Autor: João
 
 --
 
-####título: Android - criando apps reais
-####valor: 290.00
-####Autor: Jamilton
+####  título: NodeJS do básico ao avançado
+####  valor: 280.00
+####  Autor: Jorge
 
 --
 
-####título: PHP e MySQL
-####valor: 190.00
-####Autor: Fernando
+####  título: Android - criando apps reais
+####  valor: 290.00
+####  Autor: Jamilton
 
 --
 
-####título: Lógica de Programação
-####valor: 20.00
-####Autor: Maria
+#### título: PHP e MySQL
+#### valor: 190.00
+#### Autor: Fernando
 
-	>>db.livros.save(
+--
+
+#### título: Lógica de Programação
+#### valor: 20.00
+#### Autor: Maria
+
+	>> db.livros.save(
 	>>	{
 	>>		titulo: 'Introdução a linguagem de marcação HTML',
 	>>		valor: 25.00,
@@ -50,7 +50,7 @@
 	>>	}
 	>>)
 
-	>>db.livros.save(
+	>> db.livros.save(
 	>>	{
 	>>		titulo: 'NodeJS do básico ao avançado',
 	>>		valor: 280.00,
@@ -58,7 +58,7 @@
 	>>	}
 	>>)
 
-	>>db.livros.save(
+	>> db.livros.save(
 	>>	{
 	>>		titulo:'Android - criando apps reais',
 	>>		valor: 290.00,
@@ -66,7 +66,7 @@
 	>>	}
 	>>)
 
-	>>db.livros.save(
+	>> db.livros.save(
 	>>	{
 	>>		titulo:'PHP e MYSQL',
 	>>		valor:190.00,
@@ -74,7 +74,7 @@
 	>>	}
 	>>}
 	
-	>>db.livros.save(
+	>> db.livros.save(
 	>>	{
 	>>		titulo:'Lógica de Programação',
 	>>		valor:20.00,
@@ -85,37 +85,37 @@
 
 ##4) Crie as seguintes consultas:
 
-####Crie uma consulta que retorne apenas os documentos de livros com valores superiores a 200.00
-	>>db.livros.find(
+#### Crie uma consulta que retorne apenas os documentos de livros com valores superiores a 200.00
+	>> db.livros.find(
 	>>	{
 	>>		valor : {$gt : 200.00}
 	>>	}
-	>>).pretty()
+	>> ).pretty()
 
-####Crie uma consulta que retorne apenas os documentos com valores entre 10 e 30
+#### Crie uma consulta que retorne apenas os documentos com valores entre 10 e 30
 	
-	>= 10 e <=30
-	>>db.livros.find(
+	
+	>> db.livros.find(
 	>>	{
 	>>		valor : {$gte : 10.00},
 	>>		valor : {$lte : 30.00}
 	>>	}
-	>>).pretty()
+	>> ).pretty()
 
-####Crie uma consulta que retorne todos os documentos, executo aqueles cujo autor seja Fernando
+#### Crie uma consulta que retorne todos os documentos, executo aqueles cujo autor seja Fernando
 
-	>>db.livros.update(
+	>> db.livros.update(
 	>>	{
 	>>		autor:{$ne : 'Fernando'}
 	>>	}
-	>>).pretty()
+	>> ).pretty()
 
 
 
 ##5) Atualize os seguintes documentos:
 
-####Atualize o documento cujo o título é PHP e MySQL, passando seu valor de 190.00 para 175.00
-	>>db.livros.update(
+#### Atualize o documento cujo o título é PHP e MySQL, passando seu valor de 190.00 para 175.00
+	>> db.livros.update(
 	>>	{ 
 	>>		titulo:{ $eq: "PHP e MYSQL" }
 	>>	}
@@ -129,24 +129,24 @@
 	>>		multi: true
 	>>	}
 	>>
-	>>)
-####Atualize o documento cujo autor é Jorge, passando seu título para Curso Completo de NodeJS
-	>>db.livros.update(
-	>>{
+	>> )
+#### Atualize o documento cujo autor é Jorge, passando seu título para Curso Completo de NodeJS
+	>> db.livros.update(
+	>> {
 	>>	autor: {$eq : 'Jorge'}
-	>>},
-	>>{
+	>> },
+	>> {
 	>>	$set: {titulo:'Curso Completo de NodeJS', autor: 'Jorge Santana'}
-	>>},
-	>>{
+	>> },
+	>> {
 	>>	multi: true
-	>>}
-	>>)
+	>> }
+	>> )
 
 
-####Atualize todos os documentos cujo valor são iguais ou inferiores a 25.00 para o valor 27.00
+#### Atualize todos os documentos cujo valor são iguais ou inferiores a 25.00 para o valor 27.00
 
-	>>db.livros.update(
+	>> db.livros.update(
 	>>	{
 	>>		valor:{$lte: 25}
 	>>	},
@@ -156,24 +156,24 @@
 	>>	{
 	>>		multi: true
 	>>	}
-	>>)
+	>> )
 
 
 ##6) Remove os seguintes documentos:
 
-####Remova o documento cujo autor é João
-	>>db.livros.remove(
+#### Remova o documento cujo autor é João
+	>> db.livros.remove(
 	>>	{ autor: 'João'},
 	>>	true
-	>>)
+	>> )
 
-####Remova todos os documentos cujo valor é superior a 280.00
-	>>db.livros.remove(
+#### Remova todos os documentos cujo valor é superior a 280.00
+	>> db.livros.remove(
 	>>	{valor: {$gt: 280}}, true
-	>>)
+	>> )
 
-####Remova todos os documentos cujo valor é inferior a 30.00
-	>>db.livros.remove(
+#### Remova todos os documentos cujo valor é inferior a 30.00
+	>> db.livros.remove(
 	>>	{ valor: {$lt: 30}}
 	>>	, true
-	>>)
+	>> )
