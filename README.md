@@ -8,10 +8,16 @@
    Execute o mongo (MongoDB)
 
 ## 1) Crie um banco de dados chamado biblioteca
+ 
+ ```
  use biblioteca
+ ```
 
 ## 2) Crie uma coleção (collection) chamada livros
+
+```
  db.createCollection('livros')
+```
 
 ## 3) Crie os seguintes documentos:
 
@@ -192,7 +198,7 @@
  ```
 
  Remova todos os documentos cujo valor é inferior a 30.00
- 
+
  ```
  db.livros.remove(
 	{ valor: {$lt: 30}}
