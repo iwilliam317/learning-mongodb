@@ -115,7 +115,7 @@
  ).pretty()
 ```
 
- Crie uma consulta que retorne todos os documentos, executo aqueles cujo autor seja Fernando
+ Crie uma consulta que retorne todos os documentos, exceto aqueles cujo autor seja Fernando
 
 ```
  db.livros.update(
