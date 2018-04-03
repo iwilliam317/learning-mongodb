@@ -118,7 +118,7 @@
  Crie uma consulta que retorne todos os documentos, exceto aqueles cujo autor seja Fernando
 
 ```
- db.livros.update(
+ db.livros.find(
 	{
 		autor:{$ne : 'Fernando'}
 	}
