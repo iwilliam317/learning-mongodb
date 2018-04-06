@@ -206,3 +206,11 @@
 	, true
  )
  ```
+
+  Remova todos os documentos
+
+ ```
+ db.livros.remove(
+  { } 
+ )
+ ```
